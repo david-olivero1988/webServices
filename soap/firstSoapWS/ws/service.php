@@ -1,7 +1,7 @@
 <?php
 
 include_once '../../lib/nusoap.php';
-include '../services/service1.php';
+include '../functions/sum.php';
 
 
 $service  = new soap_server();
@@ -14,8 +14,8 @@ $service->schemaTargetNamespeace = $ns;
 $service->register('getResult', ['num1' => 'xsd:integer', 'num2' => 'xsd:integer'], ['response' => 'xsd:string'], $ns);
 function getResult($num1, $num2)
 {
-    
-    $function = new services();
+
+    $function = new sums();
     $success = true;
     try
     {

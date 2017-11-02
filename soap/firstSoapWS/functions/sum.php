@@ -1,6 +1,6 @@
 <?php
 
-class services
+class sums
 {
 
     public function getResult($num1, $num2)
